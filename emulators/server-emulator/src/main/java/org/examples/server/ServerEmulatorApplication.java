@@ -1,13 +1,13 @@
-package org.examples.rest;
+package org.examples.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestEmulatorApplication {
+public class ServerEmulatorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RestEmulatorApplication.class, args);
+        SpringApplication.run(ServerEmulatorApplication.class, args);
     }
 
 }
