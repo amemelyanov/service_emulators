@@ -1,0 +1,2 @@
+INSERT INTO message (msgId, timerq)
+VALUES ('1234567890', '1694171306000');

@@ -15,7 +15,8 @@
     </properties>
 
    <modules>
-        <module>emulators/rest-emulator</module>
+       <module>emulators/rest-emulator</module>
+       <module>emulators/server-emulator</module>
    </modules>
 
 </project>

@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
-
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -20,8 +17,10 @@ public class MessageService {
 
     private final KafkaTemplate<String, Message> kafkaTemplate;
 
-    public void save(Message message) throws ExecutionException, InterruptedException, TimeoutException {
+    public void save(Message message) {
         kafkaTemplate.send(topic, message);
         log.info("Вызов метода save() класса MessageService");
+        log.info("В Kafka отправлен объект: {}, topic: {}", message.toString(), topic);
+
     }
 }
