@@ -26,6 +26,23 @@ spring:
     topic: "postedmessages"
 management:
   endpoints:
+    jmx:
+      exposure:
+        include:*
     web:
       exposure:
-        include: health, info, env
+        include: prometheus,metrics,health
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    enable:
+      jvm: true
+    tags:
+      application: server-emulator
+  prometheus:
+    metrics:
+      export:
+        enabled: true
