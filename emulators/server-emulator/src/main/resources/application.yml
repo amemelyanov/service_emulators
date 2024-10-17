@@ -28,7 +28,7 @@ management:
   endpoints:
     jmx:
       exposure:
-        include:*
+        include: '*'
     web:
       exposure:
         include: prometheus,metrics,health
